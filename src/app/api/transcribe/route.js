@@ -33,15 +33,24 @@ async function createTranscriptionJob(filename){
 
 async function getJob(filename){
     const transcribeClient = getClient();
-    const jobStatuResult = null;
+    let jobStatusResult = null;
     try{
         // check if already transcribing 
         const transcriptionJobStatusCommand = new GetTranscriptionJobCommand({
             TranscriptionJobName: filename,
         });
-        jobStatuResult = await transcribeClient.send(transcriptionJobStatusCommand);
+        jobStatusResult = await transcribeClient.send(transcriptionJobStatusCommand);
     } catch(e){}
-    return jobStatuResult;
+    return jobStatusResult;
+}
+
+async function streamToString(stream){
+    const chunks = [];
+    return new promise((resolve, reject) => {
+       stream.on('data', chunk => chunks.push(Buffer.from(chunk)));
+       stream.on('end',() => resolve(Buffer.concat(chunks).toString('utf8')));
+       stream.on('error', reject);
+    });
 }
 
 async function getTranscriptionFile(filename){
@@ -62,8 +71,9 @@ async function getTranscriptionFile(filename){
         transcriptionFileResponse = await s3client.send(GetObjectCommand);
     }catch(e){}
     if(transcriptionFileResponse){
-        console.log(transcriptionFileResponse.Body.className);
+        return JSON.parse(await streamToString(transcriptionFileResponse.Body));
     }
+    return null;
 }
 
 export async function GET(req){
@@ -72,8 +82,13 @@ export async function GET(req){
     const filename = searchParams.get('filename');
 
     // find ready transcription
-    await getTranscriptionFile(filename);
-
+    const transcription = await getTranscriptionFile(filename);
+    if(transcription){
+        return Response.json({
+            status:'COMPLETED',
+            transcription,
+    });
+    }
     // check if alredy transcibing
     const existingJob = await getJob(filename);
 
