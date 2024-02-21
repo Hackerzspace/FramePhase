@@ -64,16 +64,18 @@ async function getTranscriptionFile(filename){
     });
     const GetObjectCommand = new GetObjectAclCommand({
         Bucket: process.env.BUCKET_NAME,
-        key: transcriptionFile,
+        Key: transcriptionFile,
     });
     let transcriptionFileResponse = null;
     try{
         transcriptionFileResponse = await s3client.send(GetObjectCommand);
     }catch(e){}
     if(transcriptionFileResponse){
-        return JSON.parse(await streamToString(transcriptionFileResponse.Body));
+        const chunks = [];
+        for (let chunk of transcriptionFileResponse.Body){
+            console.log(chunk);
+        }
     }
-    return null;
 }
 
 export async function GET(req){

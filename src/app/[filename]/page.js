@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 export default function FilePage({params}) {
     const filename = params.filename;
     const [isTranscribing, setIsTranscribing] = useState(false);
+    const [awsTranscriptionItems, setAwsTranscriptionItems] = useState([]);
+
     useEffect(() => {
        getTranscription();
  }, [filename]);
@@ -19,6 +21,7 @@ export default function FilePage({params}) {
         }
         else {
             setIsTranscribing(false);
+            setAwsTranscriptionItems(transcription.results.items);
         }
     });
  }
@@ -26,6 +29,16 @@ export default function FilePage({params}) {
         <div>
             {filename}
             <div>is transcribing:{JSON.stringify(isTranscribing)}</div>
+            {awsTranscriptionItems.length > 0 && awsTranscriptionItems.map(item => (
+                <div>
+                    <span className="text-white/50 mr-2">
+                        {item.start_time} - {item.end_time}
+                    </span>
+                    <span>
+                        {item.alternatives[0].content}
+                    </span>
+                </div>
+            ))}
         </div>
     );
 }
