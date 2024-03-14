@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import './globals.css'
 import SparklesIcon from "@/components/SparklesIcon";
+import { Inter } from 'next/font/google'
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "FramePhase",

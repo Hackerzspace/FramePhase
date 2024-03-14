@@ -1,29 +1,28 @@
 'use client';
 import UploadIcon from "@/components/UploadIcon";
 import axios from "axios";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import {useRouter} from "next/navigation";
+import {useState} from "react";
 
-export default function UploadForm(){
+export default function UploadForm() {
 
-    const [isUploading, setIsUploading] = useState(false);
-    const router = useRouter();
+  const [isUploading, setIsUploading] = useState(false);
+  const router = useRouter();
 
-    async function upload(ev){
-        ev.preventDefault();
-        const files = ev.target.files;
-        if(files.length > 0){
-            const file = files[0];
-            setIsUploading(true);
-            const res = await axios.postForm('/api/upload',{
-                file,
-            });
-            setIsUploading(false);
-            console.log(res.data);
-            const newName = res.data.newName;
-            router.push('/'+newName);
-        }
-      }
+  async function upload(ev) {
+    ev.preventDefault();
+    const files = ev.target.files;
+    if (files.length > 0) {
+      const file = files[0];
+      setIsUploading(true);
+      const res = await axios.postForm('/api/upload', {
+        file,
+      });
+      setIsUploading(false);
+      const newName = res.data.newName;
+      router.push('/'+newName);
+    }
+  }
     return (
         <>
             {isUploading && (
