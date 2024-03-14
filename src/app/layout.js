@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           <nav className="flex gap-6 text-white/70">
             <Link href="/">Home</Link>
             <Link href="/pricing">Pricing</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="mailto:contact@framephase.com">Contact</Link>
           </nav>
         </header>
         {children}
