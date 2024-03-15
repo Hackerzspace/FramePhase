@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overview
 
-## Getting Started
+Developed a cutting-edge Captions Generator Application from scratch using the latest technologies including Next.js 13, React, Tailwind.css, and WebAssembly. For storage we use an aws s3 bucket and for transcription we use aws transribe service. This innovative application transcribes videos and applies adjustable captions with a user-friendly editor. Noteworthy features include customizable options such as color schemes, margins, and more, enhancing user experience and accessibility.
 
-First, run the development server:
+# Technologies and Frameworks
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js
+- React
+- Axios
+- Tailwind CSS
+- WebAssembly
+- AWS SDK
+- AWS S3
+- AWS Transcribe
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Follow the steps below to install and setup the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository**
 
-## Learn More
+   Open your terminal and run the following command:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone hhttps://github.com/ParthMadhvani2/FramePhase.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Navigate to the project directory**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   cd framephase
+   ```
 
-## Deploy on Vercel
+3. **Install Node.js**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   The project requires Node.js version 13.4.19 or later. You can download it from [here](https://nodejs.org/en/download/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Install the required dependencies**
+
+   Run the following command to install all the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+   This will install all the dependencies listed in the `package.json` file, including Next.js, React, React DOM, Axios, Stripe, Tailwind CSS, and other specific dependencies such as "@aws-sdk/client-s3" and "@aws-sdk/client-transcribe".
+
+5. **Setup environment variables**
+
+    Create a `.env` file in the root directory of your project and add the required environment variables.
+
+6. **Run the project**
+
+    Now, you can run the project using the following command:
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+    ## License
+
+[MIT](https://github.com/Hackerzspace/FramePhase/blob/main/LICENSE)
