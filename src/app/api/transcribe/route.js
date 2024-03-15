@@ -6,7 +6,7 @@ function getClient() {
     region: 'us-east-1',//region in aws portal in s3 depends the upload and download speeds
     credentials:{ // this key is connected with the aws server
       accessKeyId: process.env.AWS_ACCESS_KEY1,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY1,
     },
   });
 }
@@ -60,7 +60,7 @@ async function getTranscriptionFile(filename) {
     region: 'us-east-1',//region in aws portal in s3 depends the upload and download speeds
     credentials: {
       accessKeyId: process.env.AWS_ACCESS_KEY1,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY1,
     },
   });
   const getObjectCommand = new GetObjectCommand({
