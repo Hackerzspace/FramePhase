@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <SparklesIcon />
             <span>FramePhase</span>
           </Link>
-          <nav className="flex items-center gap-2 sm:gap-6 text-white/70 text-sm sm:text-bas">
+          <nav className="flex items-center gap-2 sm:gap-6 text-white/70 text-sm sm:text-base">
             <Link href="/">Home</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="mailto:contact@framephase.com">Contact</Link>
