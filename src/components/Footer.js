@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className='w-100% pt-16 pb-8 bg-[#272079] z-0' data-scroll
+        <div className='w-full pt-16 pb-8 z-0' data-scroll
             data-scroll-section
             data-scroll-speed="-0.1">
 
@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="content3 flex flex-col gap-4">
                     <h3 className='text-xl text-semibold'>Support</h3>
                     <h3 className='text-slate-300'>FAQs</h3>
-                    <Link href="/pricng"><h3 className='text-slate-300'>Pricing</h3></Link>
+                    <Link href="/pricing"><h3 className='text-slate-300'>Pricing</h3></Link>
                 </div>
 
             </div>
