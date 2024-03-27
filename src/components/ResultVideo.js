@@ -6,6 +6,7 @@ import {useEffect, useState, useRef} from "react";
 import poppins from './../fonts/Poppins-Regular.ttf';
 import poppinsBold from './../fonts/Poppins-Bold.ttf';
 import { Promise } from 'promise';
+import 'core-js/features/promise';
 
 export default function ResultVideo({filename,transcriptionItems}) {
     const videoUrl = "https://frame-phase.s3.amazonaws.com/"+filename;
