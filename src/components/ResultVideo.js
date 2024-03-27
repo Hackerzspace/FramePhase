@@ -5,7 +5,7 @@ import {toBlobURL, fetchFile} from "@ffmpeg/util";
 import {useEffect, useState, useRef} from "react";
 import poppins from './../fonts/Poppins-Regular.ttf';
 import poppinsBold from './../fonts/Poppins-Bold.ttf';
-import 'core-js/features/promise';
+import { Promise } from 'promise';
 
 export default function ResultVideo({filename,transcriptionItems}) {
     const videoUrl = "https://frame-phase.s3.amazonaws.com/"+filename;
