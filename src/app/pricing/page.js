@@ -118,7 +118,7 @@ export default function PricingPage() {
                 </div>
             </div>
 
-            {/* <Footer /> */}
+            <Footer />
         </>
 
     );

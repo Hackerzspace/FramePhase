@@ -31,12 +31,12 @@ export default function Home() {
         />
         <UploadForm />
         <DemoSection />
-        {/* <HomePageContent /> */}
+        <HomePageContent />
       </div>
       <div className="marquee-section">
         <Marquee />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
