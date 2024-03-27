@@ -4,12 +4,20 @@ import DemoSection from "@/components/DemoSection";
 import HomePageContent from "@/components/HomePageContent";
 import PageHeaders from "@/components/PageHeaders";
 import UploadForm from "@/components/UploadForm";
-import { React, useEffect } from 'react'
+import { React, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Marquee from "@/components/Marquee";
 import Footer from "@/components/Footer";
 
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      offset: 200,
+    })
+  }, [])
   return (
     <>
 

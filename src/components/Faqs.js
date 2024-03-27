@@ -31,7 +31,7 @@ export function AccordionCustomIcon() {
                 <AccordionHeader onClick={() => handleOpen(1)} className={`border-b-0 transition-colors ${open === 1 ? "text-purple-400 hover:!text-purple-500" : ""
                     }`}>What are Captions?</AccordionHeader>
                 <AccordionBody className="mt-4 text-justify text-lg text-whitesmoke font-normal">
-                    Subtitles/Captions are text that is displayed at the bottom of a video file. This text transcribes the video content and aims to improve the understandability of the video
+                    Captions are text that is displayed at the bottom of a video file. This text transcribes the video content and aims to improve the understandability of the video.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 2} icon={<Icon id={2} open={open} />} className="mb-6 rounded-lg border border-blue-gray-100 px-4 pt-4 pb-4">
@@ -45,7 +45,7 @@ export function AccordionCustomIcon() {
                 <AccordionHeader onClick={() => handleOpen(3)} className={`border-b-0 transition-colors ${open === 3 ? "text-purple-400 hover:!text-purple-500" : ""
                     }`}>How can we download the subtitled videos?</AccordionHeader>
                 <AccordionBody className="mt-4 text-justify text-lg text-whitesmoke font-normal">
-                    You can download the subtitled videos using the “Download” button.
+                    You can download the subtitled videos using the &quot;Download&quot; button.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 4} icon={<Icon id={4} open={open} />} className="mb-6 rounded-lg border border-blue-gray-100 px-4 pt-4 pb-4">
@@ -59,14 +59,14 @@ export function AccordionCustomIcon() {
                 <AccordionHeader onClick={() => handleOpen(5)} className={`border-b-0 transition-colors ${open === 5 ? "text-purple-400 hover:!text-purple-500" : ""
                     }`}>Is FramePhase free? </AccordionHeader>
                 <AccordionBody className="mt-4 text-justify text-lg text-whitesmoke font-normal">
-                    Although FramePhase isn't entirely free, you can take advantage of our beginner plan, which comes at absolutely no cost to you.
+                    Although FramePhase isn&apos;t entirely free, you can take advantage of our beginner plan, which comes at absolutely no cost to you.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 6} icon={<Icon id={6} open={open} />} className="mb-6 rounded-lg border border-blue-gray-100 px-4 pt-4 pb-4">
                 <AccordionHeader onClick={() => handleOpen(6)} className={`border-b-0 transition-colors ${open === 6 ? "text-purple-400 hover:!text-purple-500" : ""
                     }`}>Can I coustimize the captions?</AccordionHeader>
                 <AccordionBody className="mt-4 text-justify text-lg text-whitesmoke font-normal">
-                    Absolutely! With FramePhase, you have full control to customize captions a timestamps in your videos. You're not just limited to altering the text; you can also tweak the style and font of the captions to suit your preferences.
+                    Absolutely! With FramePhase, you have full control to customize captions a timestamps in your videos. You&apos;re not just limited to altering the text you can also tweak the style and font of the captions to suit your preferences.
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 7} icon={<Icon id={7} open={open} />} className="mb-6 rounded-lg border border-blue-gray-100 px-4 pt-4 pb-4">
