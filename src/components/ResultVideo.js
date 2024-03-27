@@ -5,8 +5,6 @@ import {toBlobURL, fetchFile} from "@ffmpeg/util";
 import {useEffect, useState, useRef} from "react";
 import poppins from './../fonts/Poppins-Regular.ttf';
 import poppinsBold from './../fonts/Poppins-Bold.ttf';
-import { Promise } from 'promise';
-import 'core-js/features/promise';
 
 export default function ResultVideo({filename,transcriptionItems}) {
     const videoUrl = "https://frame-phase.s3.amazonaws.com/"+filename;
@@ -45,7 +43,7 @@ export default function ResultVideo({filename,transcriptionItems}) {
       await ffmpeg.writeFile(filename, await fetchFile(videoUrl));
       await ffmpeg.writeFile('subs.srt', srt);
       videoRef.current.src = videoUrl;
-      await new Promise((resolve) => {
+      await new Promise(resolve => {
         videoRef.current.onloadedmetadata = resolve;
       });
       const duration = videoRef.current.duration;
