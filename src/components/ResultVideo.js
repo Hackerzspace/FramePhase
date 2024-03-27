@@ -43,7 +43,7 @@ export default function ResultVideo({filename,transcriptionItems}) {
       await ffmpeg.writeFile(filename, await fetchFile(videoUrl));
       await ffmpeg.writeFile('subs.srt', srt);
       videoRef.current.src = videoUrl;
-      await new Promise((resolve, reject) => {
+      await new Promise(resolve => {
         videoRef.current.onloadedmetadata = resolve;
       });
       const duration = videoRef.current.duration;
