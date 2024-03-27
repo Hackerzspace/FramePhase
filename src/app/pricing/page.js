@@ -8,8 +8,8 @@ export default function PricingPage() {
                     <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
                         <div class="mx-auto max-w-4xl text-center">
                             <h1 class="text-xl mb-6 font-semibold leading-7 text-indigo-400">Our Transcription Plans</h1>
-                            <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Whether it's just you, or your entire
-                                team - we've got you covered.</p>
+                            <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Whether it&apos;s just you, or your entire
+                                team - we&apos;ve got you covered.</p>
                         </div>
                         <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">Choose the plan that works best for you.</p>
                         <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -83,9 +83,9 @@ export default function PricingPage() {
 
                             <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
                                 <div class="flex items-center justify-between gap-x-4">
-                                    <h2 id="product3" class="text-lg font-semibold leading-8 text-white">Product Type 3</h2>
+                                    <h2 id="product3" class="text-lg font-semibold leading-8 text-white">Pro Plan</h2>
                                 </div>
-                                <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Product Type 3</p>
+                                <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Pro Plan</p>
                                 <p class="mt-6 flex items-baseline gap-x-1">
                                     <span class="text-4xl font-bold tracking-tight text-white">€ 50 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
                                 </p>
