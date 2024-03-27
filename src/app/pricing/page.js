@@ -3,12 +3,12 @@ import Footer from "@/components/Footer";
 export default function PricingPage() {
     return (
         <>
-            <div className=" mx-auto">
+            <div className="mx-auto">
                 <div class="pt-2" id="pricing">
                     <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
                         <div class="mx-auto max-w-4xl text-center">
                             <h1 class="text-xl mb-6 font-semibold leading-7 text-indigo-400">Our Transcription Plans</h1>
-                            <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Whether it&apos;s just you, or your entire
+                            <p class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-5xl">Whether it&apos;s just you, or your entire
                                 team - we&apos;ve got you covered.</p>
                         </div>
                         <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">Choose the plan that works best for you.</p>
@@ -20,7 +20,7 @@ export default function PricingPage() {
                                 </div>
                                 <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Starter Plan</p>
                                 <p class="mt-6 flex items-baseline gap-x-1">
-                                    <span class="text-4xl font-bold tracking-tight text-white">€ 10 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                                    <span class="text-4xl font-bold tracking-tight text-white">$ 10 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
                                 </p>
                                 <a href="/pricing" aria-describedby="product1"
                                     class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
@@ -54,7 +54,7 @@ export default function PricingPage() {
                                 </div>
                                 <p class="mt-4 text-sm leading-6 text-gray-300">The most popular choice. Product details for Most Popular Plan</p>
                                 <p class="mt-6 flex items-baseline gap-x-1">
-                                    <span class="text-4xl font-bold tracking-tight text-white">€ 20 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                                    <span class="text-4xl font-bold tracking-tight text-white">$ 20 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
                                 </p>
                                 <a href="/pricing" aria-describedby="product2"
                                     class="bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
@@ -87,7 +87,7 @@ export default function PricingPage() {
                                 </div>
                                 <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Pro Plan</p>
                                 <p class="mt-6 flex items-baseline gap-x-1">
-                                    <span class="text-4xl font-bold tracking-tight text-white">€ 50 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                                    <span class="text-4xl font-bold tracking-tight text-white">$ 50 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
                                 </p>
                                 <a href="/pricing" aria-describedby="product3"
                                     class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
