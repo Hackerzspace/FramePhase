@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Link from "next/link";
 
 const Footer = () => {
@@ -9,32 +9,29 @@ const Footer = () => {
 
             <div className='footer-content flex justify-around items-start mb-12 '>
                 <div className="content1 flex flex-col gap-4">
-                    <h3 className='text-xl text-semibold'>Product</h3>
-                    <Link href="/"><h3 className='text-slate-300'>Features</h3></Link>
-                    <Link href="/"><h3 className='text-slate-300'>Caption Generator</h3></Link>
+                    <h3 className='text-xl font-semibold'>Product</h3>
+                    <Link href="/"><a className='text-slate-300'>Features</a></Link>
+                    <Link href="/"><a className='text-slate-300'>Caption Generator</a></Link>
                 </div>
                 <div className="content2 flex flex-col gap-4">
-                    <h3 className='text-xl text-semibold'>Company</h3>
-                    <Link href="mailto:contact@framephase.com"><h3 className='text-slate-300'>Contact</h3></Link>
-                    <Link href="https://github.com/Hackerzspace/FramePhase"><h3 className='text-slate-300'>About</h3></Link>
+                    <h3 className='text-xl font-semibold'>Company</h3>
+                    <a href="mailto:contact@framephase.com" className='text-slate-300'>Contact</a>
+                    <a href="https://github.com/Hackerzspace/FramePhase" className='text-slate-300'>About</a>
                 </div>
                 <div className="content3 flex flex-col gap-4">
-                    <h3 className='text-xl text-semibold'>Support</h3>
-                    <h3 className='text-slate-300'>FAQs</h3>
-                    <Link href="/pricing"><h3 className='text-slate-300'>Pricing</h3></Link>
+                    <h3 className='text-xl font-semibold'>Support</h3>
+                    <a className='text-slate-300'>FAQs</a>
+                    <Link href="/pricing"><a className='text-slate-300'>Pricing</a></Link>
                 </div>
-
             </div>
-
-
 
             <div className='video-done flex flex-col gap-4 justify-center items-center'>
-                <img src='./footer-logo.svg' alt='logo' height={150} width={150} />
+                <img src='/footer-logo.svg' alt='logo' height={150} width={150} />
                 <h1 className='text-5xl font-semibold'>Videos, <span className='text-orange-400'>Done Right</span></h1>
-                <div class="copyright">Copyright ©️ <span id="fullyear">2024</span> <Link href="/"><span className='text-orange-400'>FramePhase</span></Link>, All rights reserved</div>
+                <div className="copyright">Copyright ©️ <span id="fullyear">2024</span> <Link href="/"><span className='text-orange-400'>FramePhase</span></Link>, All rights reserved</div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Footer;

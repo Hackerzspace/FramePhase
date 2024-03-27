@@ -1,6 +1,6 @@
 import SparklesIcon from "@/components/SparklesIcon";
 import {transcriptionItemsToSrt} from "@/libs/awsTranscriptionHelpers";
-import {FFmpeg} from "@ffmpeg/ffmpeg";
+import FFmpeg from "@ffmpeg/ffmpeg";
 import {toBlobURL, fetchFile} from "@ffmpeg/util";
 import {useEffect, useState, useRef} from "react";
 import poppins from './../fonts/Poppins-Regular.ttf';

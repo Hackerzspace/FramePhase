@@ -1,7 +1,7 @@
 import React from "react";
 import UploadIcon from "./UploadIcon";
 import SparklesIcon from "./SparklesIcon";
-import { AccordionCustomIcon } from "./Faqs";
+import AccordionCustomIcon from "./Faqs"; // Assuming AccordionCustomIcon is the default export
 
 const HomePageContent = () => {
   return (
