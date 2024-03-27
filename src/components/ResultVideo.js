@@ -1,14 +1,15 @@
 import SparklesIcon from "@/components/SparklesIcon";
 import {transcriptionItemsToSrt} from "@/libs/awsTranscriptionHelpers";
-import {FFmpeg} from "@ffmpeg/ffmpeg";
+import { FFmpeg } from "@ffmpeg/ffmpeg";
 import {toBlobURL, fetchFile} from "@ffmpeg/util";
 import {useEffect, useState, useRef} from "react";
 import poppins from './../fonts/Poppins-Regular.ttf';
 import poppinsBold from './../fonts/Poppins-Bold.ttf';
+import 'core-js/features/promise';
 
 export default function ResultVideo({filename,transcriptionItems}) {
     const videoUrl = "https://frame-phase.s3.amazonaws.com/"+filename;
-    const [loaded, setLoaded] = useState(false);
+    // const [loaded, setLoaded] = useState(false);
     const [primaryColor, setPrimaryColor] = useState('#FFFFFF');
     const [outlineColor, setOutlineColor] = useState('#000000');
     const [progress, setProgress] = useState(1);
@@ -18,7 +19,7 @@ export default function ResultVideo({filename,transcriptionItems}) {
     useEffect(() => {
       videoRef.current.src = videoUrl;
       load();
-    }, []);
+    }, [videoUrl]);
   
     const load = async () => {
       const ffmpeg = ffmpegRef.current;
@@ -29,7 +30,7 @@ export default function ResultVideo({filename,transcriptionItems}) {
       });
       await ffmpeg.writeFile('/tmp/poppins.ttf', await fetchFile(poppins));
       await ffmpeg.writeFile('/tmp/poppins-bold.ttf', await fetchFile(poppinsBold));
-      setLoaded(true);
+      // setLoaded(true); // Remove this line
     }
   
     function toFFmpegColor(rgb) {
@@ -43,7 +44,7 @@ export default function ResultVideo({filename,transcriptionItems}) {
       await ffmpeg.writeFile(filename, await fetchFile(videoUrl));
       await ffmpeg.writeFile('subs.srt', srt);
       videoRef.current.src = videoUrl;
-      await new Promise((resolve, reject) => {
+      await new Promise((resolve) => {
         videoRef.current.onloadedmetadata = resolve;
       });
       const duration = videoRef.current.duration;

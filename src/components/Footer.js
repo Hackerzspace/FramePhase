@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link";
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -26,12 +27,10 @@ const Footer = () => {
 
             </div>
 
-
-
             <div className='video-done flex flex-col gap-4 justify-center items-center'>
-                <img src='./footer-logo.svg' alt='logo' height={150} width={150} />
+                <Image src='/footer-logo.svg' alt='logo' height={150} width={150} /> 
                 <h1 className='text-5xl font-semibold'>Videos, <span className='text-orange-400'>Done Right</span></h1>
-                <div class="copyright">Copyright ©️ <span id="fullyear">2024</span> <Link href="/"><span className='text-orange-400'>FramePhase</span></Link>, All rights reserved</div>
+                <div className="copyright">Copyright ©️ <span id="fullyear">2024</span> <Link href="/"><span className='text-orange-400'>FramePhase</span></Link>, All rights reserved</div>
             </div>
         </div>
     )

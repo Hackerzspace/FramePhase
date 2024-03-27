@@ -1,5 +1,6 @@
 import {GetObjectCommand, S3Client} from "@aws-sdk/client-s3";
 import {GetTranscriptionJobCommand, StartTranscriptionJobCommand, TranscribeClient} from "@aws-sdk/client-transcribe";
+import { Promise } from 'promise';
 
 function getClient() {
   return new TranscribeClient({
@@ -41,7 +42,9 @@ async function getJob(filename) {
     jobStatusResult = await transcribeClient.send(
       transcriptionJobStatusCommand
     );
-  } catch (e) {}
+  } catch (e) {
+    console.error('Error occurred while fetching transcription job status:', e);
+  }
   return jobStatusResult;
 }
 
@@ -70,7 +73,9 @@ async function getTranscriptionFile(filename) {
   let transcriptionFileResponse = null;
   try {
     transcriptionFileResponse = await s3client.send(getObjectCommand);
-  } catch (e) {}
+  } catch (e) {
+    console.error('Error occurred while fetching transcription file from S3:', e);
+  }
   if (transcriptionFileResponse) {
     return JSON.parse(
       await streamToString(transcriptionFileResponse.Body)

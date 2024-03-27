@@ -2,6 +2,7 @@ import React from "react";
 import UploadIcon from "./UploadIcon";
 import SparklesIcon from "./SparklesIcon";
 import { AccordionCustomIcon } from "./Faqs";
+import Image from 'next/image';
 
 const HomePageContent = () => {
   return (
@@ -59,7 +60,7 @@ const HomePageContent = () => {
               <span className="text-xl font-semibold text-white"> 3 </span>
             </div>
             <h3 className="mt-6 text-xl font-semibold leading-tight text-white md:mt-10 flex items-center gap-4 ml-4">
-              <img src="/download.png" height={25} width={25} /> Edit and
+              <Image src="/download.png" height={25} width={25} alt="download"/> Edit and
               Download
             </h3>
             <p className="mt-4 text-base text-white text-opacity-70 text-left ml-6">
@@ -133,7 +134,7 @@ const HomePageContent = () => {
           </ul>
         </div>
         <div data-aos="fade-left">
-          <img src="/benifits2.png" alt="benifits" height={320} width={320} />
+          <Image src="/benifits2.png" alt="benifits" height={320} width={320} />
         </div>
       </div>
 
