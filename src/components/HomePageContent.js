@@ -208,7 +208,7 @@ const HomePageContent = () => {
         data-scroll-speed="-0.1"
       >
         <div data-aos="zoom-in">
-          <h1 className="mt-20 text-2xl sm:text-4xl font-semibold mb-12 sm:mb-32">
+          <h1 className="mt-20 text-2xl sm:text-4xl font-semibold mb-8 sm:mb-32">
             Freaquently Asked Questions
           </h1>
         </div>
