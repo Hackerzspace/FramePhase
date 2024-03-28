@@ -121,15 +121,18 @@ const HomePageContent = () => {
         <div data-aos="fade-right">
           <ul className="mt-10 list-disc">
             <li className="mt-6 text-left text-xl">
-              Instantly Generate captions with
+              Revolutionize Your Content Creation with
               <br />
               FramePhase
             </li>
             <li className="mt-8 text-left text-xl">
-              Format your captions like a pro!
+              Transform your videos instantly with expertly crafted captions!
             </li>
             <li className="mt-8 text-left text-xl mb-6">
-              To increase and enhance user experince
+              Elevate User Engagement:
+            </li>
+            <li className="mt-8 text-left text-xl mb-6">
+              Empower users with cutting-edge text summarization technology!
             </li>
           </ul>
         </div>
