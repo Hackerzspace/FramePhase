@@ -145,17 +145,17 @@ const HomePageContent = () => {
             Not convinced?</h1>
             <br />
           <h1 className="text-2xl sm:text-3xl font-semibold">
-            See how our Transcript <br/> compares to YouTube's
+            See how our Transcript <br/> compares to YouTube&apos;s
           </h1>
           <ul className="mt-10 list-disc text-lg">
-          Youtube's auto transcripts are ok... but they:
-            <li className="text-slate-400 mt-2 text-left text-base">don't count for SEO</li>
+          Youtube&apos;s auto transcripts are ok... but they:
+            <li className="text-slate-400 mt-2 text-left text-base">don&apos;t count for SEO</li>
             <li className="text-slate-400 mt-2 text-left text-base">mash separate sentences together</li>
-            <li className="text-slate-400 mt-2 text-left text-base">don't have commas or periods</li>
+            <li className="text-slate-400 mt-2 text-left text-base">don&apos;t have commas or periods</li>
           </ul>
           <ul className="mt-10 list-decimal text-xl">
           Our Transcripts:
-            <li className="text-sky-400 mt-2 text-left text-base">More Accurate transcripts 🤪 - what's the point otherwise?</li>
+            <li className="text-sky-400 mt-2 text-left text-base">More Accurate transcripts 🤪 - what&apos;s the point otherwise?</li>
             <li className="text-sky-400 mt-2 text-left text-base">Punctuation and Capitalization ❓ - humans will read it</li>
             <li className="text-sky-400 mt-2 text-left text-base">Easy to get 99.9% accuracy ✨ - it ranks you better</li>
           </ul>
@@ -164,7 +164,7 @@ const HomePageContent = () => {
           <div data-aos="fade-up" className="mt-4 text-center w-[12rem] h-fit p-4 bg-slate-500/50 rounded-3xl border-2 border-[#5978F3ca]">
             <h2 className=" text-xl">Youtube</h2>
             <ul className="mt-6">
-              <li className="text-sm pb-2">[00:00] no freaking way that brett maverick's</li>
+              <li className="text-sm pb-2">[00:00] no freaking way that brett maverick&apos;s</li>
 
               <li className="text-sm pb-2">[00:02] jawline is</li>
 
@@ -174,13 +174,13 @@ const HomePageContent = () => {
 
               <li className="text-sm pb-2">[00:07] quite simply exactly what it sounds like</li>
 
-              <li className="text-sm pb-2">[00:09] we review people's jawlines we're going</li>
+              <li className="text-sm pb-2">[00:09] we review people&apos;s jawlines we&apos;re going</li>
             </ul>
           </div>
           <div data-aos="fade-down" className=" mt-0 text-center w-[12rem] h-fit p-4 bg-slate-500/50 rounded-3xl border-2 border-[#5978F3ca]">
             <h2 className=" text-xl">FramePhase</h2>
             <ul className="mt-6">
-              <li className="text-sm pb-2">[00:00] No fricking way that Brett Maverick's jawline is</li>
+              <li className="text-sm pb-2">[00:00] No fricking way that Brett Maverick&apos;s jawline is</li>
 
               <li className="text-sm pb-2">[00:02] natural</li>
 
@@ -188,7 +188,7 @@ const HomePageContent = () => {
 
               <li className="text-sm pb-2">[00:06] which is quite simply exactly what it sounds like.</li>
 
-              <li className="text-sm pb-2">[00:09] We review people's jawlines so we're going to be looking at an absolute Maverick</li>
+              <li className="text-sm pb-2">[00:09] We review people&apos;s jawlines so we&apos;re going to be looking at an absolute Maverick</li>
 
               <li className="text-sm pb-2">[00:14] called Brett Maverick.</li>
             </ul>

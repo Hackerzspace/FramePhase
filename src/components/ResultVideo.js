@@ -75,7 +75,7 @@ export default function ResultVideo({filename,transcriptionItems}) {
           <div className="mb-4">
             <button
               onClick={transcode}
-              className="rounded-full py-3 px-5 inline-flex gap-2 cursor-pointer" style={{ background: '#0d1127',    border: '2px solid #5978F3ca'}}>
+              className="rounded-full py-3 px-5 mx-3 inline-flex gap-2 cursor-pointer" style={{ background: '#0d1127',    border: '2px solid #5978F3ca'}}>
               <SparklesIcon />
               <span>Apply captions</span>
             </button>
