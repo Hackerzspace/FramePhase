@@ -51,6 +51,12 @@ export default function TranscriptionEditor({
     }
   }
 
+  function sendEmail(email, summary) {
+    // Implement your email sending logic here
+    console.log(`Email sent to ${email} with summary: ${summary}`);
+    // You can use libraries like Nodemailer or any email API for sending emails
+  }
+
   return (
     <>
       <div className="grid grid-cols-3 sticky top-0 bg-black/80 p-2 rounded-md">
@@ -71,6 +77,15 @@ export default function TranscriptionEditor({
           ))}
         </div>
       )}
+      <div>
+        <input
+          type="email"
+          className="mt-5 mr-4 p-2 text-black rounded-md w-full"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
       <div className="flex md:flex-row flex-col justify-between mt-4 w-full">
         <div className="md:w-2/5 w-full ">
           <label htmlFor="text" className=" text-sm font-medium text-primary">
