@@ -1,9 +1,15 @@
 import TranscriptionItem from "@/components/TranscriptionItem";
+import { useState } from 'react';
+import axios from 'axios';
+import SparklesIcon from "./SparklesIcon";
 
 export default function TranscriptionEditor({
   awsTranscriptionItems,
   setAwsTranscriptionItems,
 }) {
+  const [text, setText] = useState('');
+  const [summary, setSummary] = useState('');
+  const [email, setEmail] = useState('');
 
   function updateTranscriptionItem(index, prop, ev) {
     const newAwsItems = [...awsTranscriptionItems];
@@ -11,6 +17,44 @@ export default function TranscriptionEditor({
     newItem[prop] = ev.target.value;
     newAwsItems[index] = newItem;
     setAwsTranscriptionItems(newAwsItems);
+  }
+
+  function extractContentWords(transcriptionItems) {
+    let words = transcriptionItems.map(item => item.content.split(' '));
+    words = words.flat().filter(word => word.trim() !== ''); // Remove empty words
+    return words.join(' ');
+  }
+
+  async function summarizeText() {
+    const textToSummarize = extractContentWords(awsTranscriptionItems);
+    setText(textToSummarize); // Update text state with extracted content
+    // Your text summarization logic goes here
+    try {
+      const response = await axios.post("https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-text/", {
+        text: textToSummarize,
+        min_length: 100,
+        max_length: 300,
+      }, {
+        headers: {
+          "content-type": "application/json",
+          "x-rapidapi-host": "tldrthis.p.rapidapi.com",
+          "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+        },
+      });
+      setSummary(response.data.summary);
+
+      // Send email
+      sendEmail(email, response.data.summary);
+    } catch (error) {
+      console.error("Error summarizing text:", error);
+      // Handle error here
+    }
+  }
+
+  function sendEmail(email, summary) {
+    // Implement your email sending logic here
+    console.log(`Email sent to ${email} with summary: ${summary}`);
+    // You can use libraries like Nodemailer or any email API for sending emails
   }
 
   return (
@@ -33,6 +77,60 @@ export default function TranscriptionEditor({
           ))}
         </div>
       )}
+      <div>
+        <input
+          type="email"
+          className="mt-5 mr-4 p-2 text-black rounded-md w-full"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className="flex md:flex-row flex-col justify-between mt-4 w-full">
+        <div className="md:w-2/5 w-full ">
+          <label htmlFor="text" className=" text-sm font-medium text-primary">
+            Enter your text
+          </label>
+          <div className="mt-2">
+            <textarea
+              rows={14}
+              name="text"
+              id="text"
+              className="focus:outline-none focus:ring-4 w-full focus:ring-active text-black text-base p-4 rounded-md"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center md:mt-0 mt-4">
+          <button
+            className=" rounded-full px-5 py-3 bg-active gap-1 font-bold inline-flex text-background hover:bg-primary m-1 cursor-pointer"
+            style={{ background: '#0d1127',    border: '2px solid #5978F3ca'}}
+            type="button"
+            onClick={summarizeText}
+          >
+            <SparklesIcon />
+            <span>Summarize</span>
+          </button>
+        </div>
+
+        <div className="md:w-2/5 md:mt-0 mt-4 w-full">
+          <label htmlFor="summary" className=" text-sm font-medium text-primary">
+            Summarized text
+          </label>
+          <div className="mt-2">
+            <textarea
+              readOnly
+              rows={14}
+              name="summary"
+              id="summary"
+              className="focus:outline-none focus:ring-4 w-full focus:ring-active text-black text-base p-4 rounded-md"
+              value={summary}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

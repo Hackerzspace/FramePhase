@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className + " bg-gradient-to-r from-bg-gradient-from via-bg-gradient-m to-bg-gradient-to min-h-screen text-white"}>
         <main className="p-2">
-          <header className="flex justify-between my-2 sm:my-8 max-w-4xl mx-auto">
+          <header className="flex justify-between my-6 px-2 sm:my-8 max-w-4xl mx-auto">
             <Link href="/" className="flex gap-1">
               <SparklesIcon />
               <span>FramePhase</span>
