@@ -51,12 +51,6 @@ export default function TranscriptionEditor({
     }
   }
 
-  function sendEmail(email, summary) {
-    // Implement your email sending logic here
-    console.log(`Email sent to ${email} with summary: ${summary}`);
-    // You can use libraries like Nodemailer or any email API for sending emails
-  }
-
   return (
     <>
       <div className="grid grid-cols-3 sticky top-0 bg-black/80 p-2 rounded-md">
